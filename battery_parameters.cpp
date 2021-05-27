@@ -19,27 +19,6 @@ std::vector<int> BMSParameters::getBatterySOCValuesInRange(int minSOCVal, int ma
     return generateRandomPrameters(minSOCVal, maxSOCVal);         
 }
 
-bool BMSParameters::sendParameterValuesToConsole( int minVal, int maxVal)
-{
-	int numberOfValues = maxVal-minVal+1;
-	if(parameterName == "Temperature")
-	{
-		printf("The values for parameter: Temperature");
-		std::cout << "------------------------------------------------------\n";
-		for (int paramValue = 0; paramValue < numberOfValues; ++paramValue) 
-		{
-            		printf("%d \n", getBatteryTempValuesInRange(minVal,maxVal)[paramValue]);
-		}
-		std::cout << "---------------------------------------------------------\n";
-		return true;
-	}		
-	else
-	{
-		return false;
-	}
-
-}
-
 void BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVal)
 {
 	int numberOfValues = maxTempVal-minTempVal+1;
