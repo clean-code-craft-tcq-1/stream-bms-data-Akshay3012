@@ -40,7 +40,7 @@ bool BMSParameters::sendParameterValuesToConsole( int minVal, int maxVal)
 
 }
 
-bool BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVal)
+void BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVal)
 {
 	int numberOfValues = maxTempVal-minTempVal+1;
 	printf("The values for parameter: Temperature");
@@ -52,7 +52,7 @@ bool BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVa
 	std::cout << "---------------------------------------------------------\n";
 }
 
-bool BMSParameters::sendSOCValuesToConsole(int minSOCVal, int maxSOCVal)
+void BMSParameters::sendSOCValuesToConsole(int minSOCVal, int maxSOCVal)
 {
 	int numberOfValues = maxSOCVal-minSOCVal+1;
 	printf("The values for parameter: SOC");
@@ -68,12 +68,12 @@ bool BMSParameters::sendParameterValuesToConsole( std::string parameterName, int
 {
 	if(parameterName == "Temperature")
 	{
-		sendTemperatureValuesToConsole(minVal,maxVal )
+		sendTemperatureValuesToConsole(minVal,maxVal );
 		return true;
 	}
 	if(parameterName == "SOC")
 	{
-		sendSOCValuesToConsole(minVal,maxVal )
+		sendSOCValuesToConsole(minVal,maxVal );
 		return true;
 	}
 	else
