@@ -1,3 +1,5 @@
+#include<iostream>
+#include<algorithm>
 #include"battery_parameters.h"
 
 std::vector<int> BMSParameters::generateRandomPrameters(int minVal, int maxVal)
@@ -26,7 +28,7 @@ bool BMSParameters::sendParameterValuesToConsole(std::string parameterName, int 
 		std::cout << "------------------------------------------------------\n";
 		for (int paramValue = 0; paramValue < numberOfValues; ++paramValue) 
 		{
-			std::cout << getBatteryTempValuesInRange()[paramValue] << \n;
+            		printf("%d \n", getBatteryTempValuesInRange(minVal,maxVal)[paramValue]);
 		}
 		std::cout << "---------------------------------------------------------\n";
 		return true;
@@ -37,7 +39,7 @@ bool BMSParameters::sendParameterValuesToConsole(std::string parameterName, int 
 		std::cout << "------------------------------------------------------\n";
 		for (int paramValue = 0; paramValue < numberOfValues; ++paramValue) 
 		{
-			std::cout << getBatterySOCValuesInRange()[paramValue] << \n;
+			printf("%d \n", getBatterySOCValuesInRange(minVal,maxVal)[paramValue]);
 		}
 		std::cout << "---------------------------------------------------------\n";
 		return true;
