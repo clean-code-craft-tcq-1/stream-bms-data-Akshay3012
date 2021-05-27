@@ -1,3 +1,5 @@
+#include<iostream>
+#include<algorithm>
 #pragma once
 #include<map>
 
