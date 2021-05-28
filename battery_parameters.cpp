@@ -61,10 +61,3 @@ bool BMSParameters::sendParameterValuesToConsole( std::string parameterName, int
 	}
 
 }
-
-int main()
-{
-
-
-	return 0;
-} 
