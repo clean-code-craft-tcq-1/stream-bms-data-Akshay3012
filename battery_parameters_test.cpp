@@ -16,5 +16,5 @@ TEST_CASE(" Parameter values"){
   
   REQUIRE(obj_BMSParameters.sendParameterValuesToConsole(parameterName1, minTempVal, maxTempVal) == true);
   REQUIRE(obj_BMSParameters.sendParameterValuesToConsole(parameterName2, minSOCVal, maxSOCVal) == true);
-  REQUIRE(obj_BMSParameters.sendParameterValuesToConsole(wrongParameterName, minTempVal, maxTempVal) == true);	
+  REQUIRE(obj_BMSParameters.sendParameterValuesToConsole(wrongParameterName, minTempVal, maxTempVal) == false);	
 }
