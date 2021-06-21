@@ -75,12 +75,14 @@ void readfromconsole()
    while (fgets(rv_data, 500, stdin))
    {
 	char * token = strtok(rv_data, "/n");
-   	// loop through the string to extract all other tokens
    	while( token != NULL ) 
 	{
 		if(isdigit(*token))
 		{
-			rv_array[i] = atoi(token);
+			if(i<10)	
+				rv_array_temp[i] = atoi(token);
+			else
+				rv_array_soc[i] = atoi(token);
 			i++;
 		}	
       		token = strtok(NULL, "/n");
@@ -91,7 +93,7 @@ void readfromconsole()
 bool compareDataFromStream(int send_data[],int receive_data[])
 {
 	bool flag = true;
-	for(int i = 0; i<20; i++)
+	for(int i = 0; i<10; i++)
 		if(send_data[i] != receive_data[i])
 		   flag = false;
 	return flag;
