@@ -14,6 +14,9 @@
 #include "ctype.h"
 #include"stdbool.h"
 
+int stream[20];
+bool settingstatus = false;
+    
 
 /* Function Details *******************************************************************************************
 * Function Name : Calc_Maxi
@@ -21,16 +24,17 @@
 * Arguments     : current_value(float), prev_maxi(float)
 * Returns       : current_value(float) or prev_maxi(float) which is greater
 * *********************************************************************************************************** */
-float Calc_Maxi(float current_value, float prev_maxi)
+float Calc_Maxi()
 {
-  if(current_value > prev_maxi)
-  {
-    return current_value;
-  }
-  else
-  {
-    return prev_maxi;
-  }
+  int max = stream[0];
+ 
+    // Traverse array elements from second and
+    // compare every element with current max 
+    for (i = 0; i < 20; i++)
+        if (stream[i] > max)
+         max = stream[i];
+	printf("max=%d",max);
+	
 }
 
 /* Function Details *******************************************************************************************
@@ -81,12 +85,11 @@ float Calc_Average(float Val_Arr[], int NoOfValues)
 
 
 int readfromconsole()
-{  bool settingstatus = false;
+{  
    char rv_data[500];
     char ch;
     int i=0;
-    int stream[20];
-    
+   
   // while ((ch = fgetc(stdin)) != EOF)
 while (fgets(rv_data, 500, stdin))
 {
@@ -108,4 +111,5 @@ while (fgets(rv_data, 500, stdin))
 	settingstatus= true;
  
 }
+ return settingstatus;
 }
