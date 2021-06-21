@@ -9,8 +9,8 @@
 
 /* ******************************* Defines ******************************* */
 
-int stream[20];
-char rv_data[500];
+static int stream[20];
+static char rv_data[500];
 
 /* ***************************** Prototypes ***************************** */
 float Calc_Maxi();
