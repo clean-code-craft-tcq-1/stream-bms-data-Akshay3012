@@ -13,7 +13,7 @@ jobs:
     - name: install coverage tool
       run: sudo apt-get install -y gcovr
 	  
-	- name: build
+    - name: build
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker *.cpp*   
       
     - name: Build receiver for pipe
@@ -25,7 +25,7 @@ jobs:
     - name: run
       run: ./testchecker1
 		 
-	- name: create coverage artifact
+    - name: create coverage artifact
       uses: actions/upload-artifact@v2
       with:
         name: coverage
