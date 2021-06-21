@@ -16,7 +16,7 @@ jobs:
     - name: Build receiver for pipe
       run: gcc -DMAIN -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker1 ./Bms_Receiver/*.c
       
-     - name: run
+    - name: run
       run: ./testchecker
 
     - name: run
