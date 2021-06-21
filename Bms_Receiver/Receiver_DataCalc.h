@@ -9,7 +9,8 @@
 
 /* ******************************* Defines ******************************* */
 
-static int rv_array[20];
+static int rv_array_temp[10];
+static int rv_array_soc[10];
 static char rv_data[500];
 
 /* ***************************** Prototypes ***************************** */
