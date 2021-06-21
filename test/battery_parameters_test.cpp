@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include "test/catch.hpp"
+#include "catch.hpp"
 #include"battery_parameters.h"
 
 TEST_CASE(" Parameter values"){
