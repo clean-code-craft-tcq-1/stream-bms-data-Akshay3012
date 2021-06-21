@@ -2,6 +2,8 @@
 #include<algorithm>
 #include"battery_parameters.h"
 
+int count = 0;
+
 std::vector<int> BMSParameters::generateRandomPrameters(int minVal, int maxVal)
 {
 	static std::vector<int> generatedParameters;
@@ -26,7 +28,9 @@ void BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVa
 	std::cout << "------------------------------------------------------\n";
 	for (int paramValue = 0; paramValue < numberOfValues; ++paramValue) 
 	{
-            	printf("%d \n", getBatteryTempValuesInRange(minTempVal,maxTempVal)[paramValue]);
+		send_array[count] = getBatteryTempValuesInRange(minTempVal,maxTempVal)[paramValue];
+            	printf("%d \n", send_array[count]);
+		count++;
 	}
 	std::cout << "---------------------------------------------------------\n";
 }
@@ -38,7 +42,9 @@ void BMSParameters::sendSOCValuesToConsole(int minSOCVal, int maxSOCVal)
 	std::cout << "------------------------------------------------------\n";
 	for (int paramValue = 10; paramValue < numberOfValues; ++paramValue) 
 	{
-            	printf("%d \n", getBatteryTempValuesInRange(minSOCVal,maxSOCVal)[paramValue]);
+            	send_array[count] = getBatteryTempValuesInRange(minTempVal,maxTempVal)[paramValue];
+            	printf("%d \n", send_array[count]);
+		count++;
 	}
 	std::cout << "---------------------------------------------------------\n";
 }
