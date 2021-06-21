@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 
+static int send_array[20];
 
 class BMSParameters
 {
