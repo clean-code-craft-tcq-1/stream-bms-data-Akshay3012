@@ -21,7 +21,7 @@ std::vector<int> BMSParameters::getBatterySOCValuesInRange(int minSOCVal, int ma
 
 void BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVal)
 {
-	int numberOfValues = maxTempVal-minTempVal+1;
+	int numberOfValues = 10;
 	printf("The values for parameter: Temperature");
 	std::cout << "------------------------------------------------------\n";
 	for (int paramValue = 0; paramValue < numberOfValues; ++paramValue) 
@@ -33,7 +33,7 @@ void BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVa
 
 void BMSParameters::sendSOCValuesToConsole(int minSOCVal, int maxSOCVal)
 {
-	int numberOfValues = maxSOCVal-minSOCVal+1;
+	int numberOfValues = 10;
 	printf("The values for parameter: SOC");
 	std::cout << "------------------------------------------------------\n";
 	for (int paramValue = 0; paramValue < numberOfValues; ++paramValue) 
