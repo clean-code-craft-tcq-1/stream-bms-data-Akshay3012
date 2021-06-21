@@ -10,7 +10,7 @@
 
 TEST_CASE("Case for Postive test case :- Success of Data readFromConsole") {
 
-  REQUIRE(readfromConsole(Temperature, SOC) == Success);
+  REQUIRE(readfromConsole() == Success);
 }
 /*Positive test case */
 TEST_CASE("Case for Positive test case :-Success of finding temperature array Minimum value") {
