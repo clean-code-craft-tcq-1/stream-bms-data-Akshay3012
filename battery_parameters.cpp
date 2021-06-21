@@ -4,7 +4,7 @@
 
 std::vector<int> BMSParameters::generateRandomPrameters(int minVal, int maxVal)
 {
-	std::vector<int> generatedParameters;
+	static std::vector<int> generatedParameters;
 	generatedParameters.push_back(rand() % (maxVal - minVal + 1) + minVal);
     return generatedParameters;        
 }
