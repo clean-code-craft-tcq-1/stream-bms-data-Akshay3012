@@ -8,8 +8,6 @@
 #include "stdbool.h"
 
 
-//printstream();
-
 TEST_CASE("Case for Postive test case :- Success of Data readFromConsole Temperature") {
 
   REQUIRE(compareDataFromStream(rv_array_temp,send_array_temp) == true);
