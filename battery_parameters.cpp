@@ -2,7 +2,7 @@
 #include<algorithm>
 #include"battery_parameters.h"
 
-int count = 0;
+
 
 std::vector<int> BMSParameters::generateRandomPrameters(int minVal, int maxVal)
 {
@@ -28,9 +28,8 @@ void BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVa
 	std::cout << "------------------------------------------------------\n";
 	for (int paramValue = 0; paramValue < numberOfValues; ++paramValue) 
 	{
-		send_array[count] = getBatteryTempValuesInRange(minTempVal,maxTempVal)[paramValue];
-            	printf("%d \n", send_array[count]);
-		count++;
+		send_array_temp[paramValue] = getBatteryTempValuesInRange(minTempVal,maxTempVal)[paramValue];
+            	printf("%d \n", send_array_temp[paramValue]);
 	}
 	std::cout << "---------------------------------------------------------\n";
 }
@@ -38,12 +37,13 @@ void BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVa
 void BMSParameters::sendSOCValuesToConsole(int minSOCVal, int maxSOCVal)
 {
 	int numberOfValues = 20;
+	int count = 0;
 	printf("The values for parameter: SOC");
 	std::cout << "------------------------------------------------------\n";
 	for (int paramValue = 10; paramValue < numberOfValues; ++paramValue) 
 	{
-            	send_array[count] = getBatteryTempValuesInRange(minSOCVal,maxSOCVal)[paramValue];
-            	printf("%d \n", send_array[count]);
+            	send_array_soc[count] = getBatteryTempValuesInRange(minSOCVal,maxSOCVal)[paramValue];
+            	printf("%d \n", send_array_soc[count]);
 		count++;
 	}
 	std::cout << "---------------------------------------------------------\n";
