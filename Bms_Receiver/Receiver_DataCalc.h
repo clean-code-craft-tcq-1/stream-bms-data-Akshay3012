@@ -13,7 +13,7 @@ int stream[20];
 char rv_data[500];
 
 /* ***************************** Prototypes ***************************** */
-float Calc_Maxi(float current_value, float prev_maxi);
+float Calc_Maxi();
 float Calc_Mini(float current_value, float prev_mini);
 float Calc_Average(float Val_Arr[], int NoOfValues);
 
