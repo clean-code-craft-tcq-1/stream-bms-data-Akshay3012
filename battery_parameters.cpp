@@ -33,10 +33,10 @@ void BMSParameters::sendTemperatureValuesToConsole(int minTempVal, int maxTempVa
 
 void BMSParameters::sendSOCValuesToConsole(int minSOCVal, int maxSOCVal)
 {
-	int numberOfValues = 10;
+	int numberOfValues = 20;
 	printf("The values for parameter: SOC");
 	std::cout << "------------------------------------------------------\n";
-	for (int paramValue = 0; paramValue < numberOfValues; ++paramValue) 
+	for (int paramValue = 10; paramValue < numberOfValues; ++paramValue) 
 	{
             	printf("%d \n", getBatteryTempValuesInRange(minSOCVal,maxSOCVal)[paramValue]);
 	}
