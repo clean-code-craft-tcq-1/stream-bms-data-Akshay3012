@@ -25,7 +25,7 @@ int main() {
     int i=0;
     
    // while ((c = fgetc(stdin)) != EOF) fputc(c, stdout);
-    while ( (ch = getchar()) != EOF) 
+    while ( (ch = getchar(stdin)) != EOF) 
     {
         rv_data[i]=ch;
         i++;
