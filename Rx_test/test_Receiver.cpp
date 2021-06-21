@@ -11,21 +11,21 @@
 
 TEST_CASE("Case for Postive test case :- Success of Data readFromConsole") {
 
-  REQUIRE(readfromconsole() == true);
+  REQUIRE(compareDataFromStream(stream,stream) == true);
 }
-/*Positive test case */
+/*
 TEST_CASE("Case for Positive test case :-Success of finding temperature array Minimum value") {
 	UserRequestOperation Operator= ToFindMinValue;
   REQUIRE(FindMinandMaxValue(Temperature,Operator) == true);
 }
 
-/*Positive test case */
+
 TEST_CASE("Case for Positive test case :-Success of finding SOC array Minimum value") {
   UserRequestOperation Operator= ToFindMinValue;
   REQUIRE(FindMinandMaxValue(SOC,Operator) == true);
 }
 
-/*Positive test case */
+
 TEST_CASE("Case for Positive test case:-Success of finding SOC array Maximum value value") {
   UserRequestOperation Operator= ToFindMaxValue;
   REQUIRE(FindMinandMaxValue(SOC,Operator)  == true);
@@ -40,3 +40,4 @@ TEST_CASE("Case for evaluating success of Moving average of SOC") {
 
   REQUIRE(FindMovingAverage(SOC,lengthOfInputData) == true);
 }
+*/
