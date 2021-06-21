@@ -101,7 +101,11 @@ void readfromconsole()
     }
 }
 
-bool compareDataFromStream(char* send_data,char* receive_data)
+bool compareDataFromStream(int send_data[],int receive_data[])
 {
-	return true;
+	bool flag = true;
+	for(int i = 0; i<10; i++)
+		if(send_data[i] != receive_data[i]
+		   flag = false;
+	return flag;
 }
