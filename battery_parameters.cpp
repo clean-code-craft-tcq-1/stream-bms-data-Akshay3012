@@ -42,7 +42,7 @@ void BMSParameters::sendSOCValuesToConsole(int minSOCVal, int maxSOCVal)
 	std::cout << "------------------------------------------------------\n";
 	for (int paramValue = 10; paramValue < numberOfValues; ++paramValue) 
 	{
-            	send_array[count] = getBatteryTempValuesInRange(minTempVal,maxTempVal)[paramValue];
+            	send_array[count] = getBatteryTempValuesInRange(minSOCVal,maxSOCVal)[paramValue];
             	printf("%d \n", send_array[count]);
 		count++;
 	}
