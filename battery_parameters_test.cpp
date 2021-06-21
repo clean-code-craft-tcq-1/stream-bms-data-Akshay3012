@@ -5,9 +5,9 @@
 TEST_CASE(" Parameter values"){
  
 	int minTempVal = 0;   
-	int maxTempVal = 100;
+	int maxTempVal = 10;
 	int minSOCVal = 0;   
-	int maxSOCVal = 100;
+	int maxSOCVal = 10;
   std::string parameterName1 = "Temperature";
   std::string parameterName2 = "SOC";
   std::string wrongParameterName = "Charging Rate";
