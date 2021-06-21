@@ -32,9 +32,13 @@ while (fgets(rv_data, 500, stdin))
    	// loop through the string to extract all other tokens
    	while( token != NULL ) 
 	{
+		if(isdigit(*token))
+		//{
       		printf( " %s\n", token ); //printing each token
       		token = strtok(NULL, "/n");
+		//}
    	}
+	
 	
 }
 	
