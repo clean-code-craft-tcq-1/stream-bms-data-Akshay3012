@@ -20,7 +20,7 @@ jobs:
       run: ./testchecker
       
     - name : Sender | Reciever
-      run: ./testchecker | gcc -DMAIN -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker1 ./Rx_test/*.cpp
+      run: ./testchecker | gcc -DMAIN -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker1 ./Bms_Receiver/*.c
       
     - name: run
       run: ./testchecker1 
