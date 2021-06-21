@@ -4,7 +4,7 @@
 #include "stdlib.h"
 #include "string.h"
 #include "ctype.h"
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
 
 /* Function Details *******************************************************************************************
 * Function Name : main
@@ -37,9 +37,7 @@ while (fgets(rv_data, 500, stdin))
 		
    	}
 	
-	//*max_element(stream, stream + 20) ;
-	printf("MAX=%d",*max_element(stream, stream + 20) );
-	printf("MAX=%d",*min_element(stream, stream + 20) );
+	
 	
 	
 	
