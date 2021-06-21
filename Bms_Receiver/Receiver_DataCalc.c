@@ -25,7 +25,7 @@
 int Calc_Maxi(int Val_Arr[])
 {
 	int max = Val_Arr[0];
-	for (int i = 0; i < 20; i++)
+	for (int i = 0; i < 10; i++)
         	if (Val_Arr[i] > max)
          		max = Val_Arr[i];
 	return max;
@@ -40,7 +40,7 @@ int Calc_Maxi(int Val_Arr[])
 int Calc_Mini(int Val_Arr[])
 {
 	int min = Val_Arr[0];
-	for (int i = 0; i < 20; i++)
+	for (int i = 0; i < 10; i++)
         	if (Val_Arr[i] < min)
          		min = Val_Arr[i];
 	return min;
@@ -58,7 +58,7 @@ float Calc_Average(int Val_Arr[])
   float Sum = 0;
   float NoOfValues = 5;	
 
-   for(int i=15; i<20; i++)
+   for(int i=5; i<10; i++)
    {
      Sum += Val_Arr[i];
    }		
