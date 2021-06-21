@@ -49,6 +49,6 @@ TEST_CASE("Case for evaluating success of Moving average Temperature") {
 
 TEST_CASE("Case for evaluating success of Moving average Soc") {
 
-  REQUIRE(compareAverageDataFromStream(rv_array,send_array_soc) == true);
+  REQUIRE(compareAverageDataFromStream(rv_array_soc,send_array_soc) == true);
 }
 
