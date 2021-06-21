@@ -5,6 +5,7 @@
 #ifndef RECEIVER_DATACALC_H
 #define RECEIVER_DATACALC_H
 #pragma once
+#include "stdbool.h"
 
 /* ******************************* Defines ******************************* */
 
@@ -17,6 +18,6 @@ float Calc_Mini(float current_value, float prev_mini);
 float Calc_Average(float Val_Arr[], int NoOfValues);
 
 void readfromconsole();
-bool compareDataFromStream(char* send_data,char* receive_data);
+bool compareDataFromStream(int send_data[],int receive_data[]);
 
 #endif
