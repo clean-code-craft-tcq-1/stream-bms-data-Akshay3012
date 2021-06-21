@@ -49,7 +49,7 @@ jobs:
         # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
 		
-	- name : Sender | Reciever
+    - name : Sender | Reciever
       run: |
          g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker *.cpp*   
          gcc -DMAIN -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker1 ./Bms_Receiver/*.c
