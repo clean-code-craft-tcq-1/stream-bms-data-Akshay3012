@@ -77,3 +77,9 @@ float Calc_Average(float Val_Arr[], int NoOfValues)
   
   return Average;
 }
+
+
+int readfromconsole()
+{  bool settingstatus = false;
+	settingstatus= true;
+}
