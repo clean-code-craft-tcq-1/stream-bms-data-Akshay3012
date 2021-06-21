@@ -12,10 +12,8 @@
 #include "stdlib.h"
 #include "string.h"
 #include "ctype.h"
-#include"stdbool.h"
+#include "stdbool.h"
 
-int stream[20];
-bool settingstatus = false;
     
 
 /* Function Details *******************************************************************************************
@@ -84,32 +82,26 @@ float Calc_Average(float Val_Arr[], int NoOfValues)
 }
 
 
-int readfromconsole()
+void readfromconsole()
 {  
-   char rv_data[500];
-    char ch;
-    int i=0;
-   
-  // while ((ch = fgetc(stdin)) != EOF)
-while (fgets(rv_data, 500, stdin))
-{
-	//printf("%s", rv_data); 
+   int i=0;
+   while (fgets(rv_data, 500, stdin))
+   {
 	char * token = strtok(rv_data, "/n");
    	// loop through the string to extract all other tokens
    	while( token != NULL ) 
 	{
 		if(isdigit(*token))
 		{
-      		//printf( " %s\n", token ); //printing each token
-		stream[i] = atoi(token);
-		printf("%d\n",stream[i]);
-		i++;
+			stream[i] = atoi(token);
+			i++;
 		}	
       		token = strtok(NULL, "/n");
-		
    	}
-	settingstatus= true;
- 
+    }
 }
- return settingstatus;
+
+bool compareDataFromStream(char* send_data,char* receive_data)
+{
+	return true;
 }
