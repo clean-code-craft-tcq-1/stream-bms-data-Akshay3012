@@ -2,6 +2,7 @@
 
 #include "../test/catch.hpp"
 #include "../Bms_Receiver/Receiver_DataCalc.h"
+#include "../battery_parameters.h"
 #include "stddef.h"
 #include "string.h"
 #include "stdbool.h"
@@ -11,7 +12,7 @@
 
 TEST_CASE("Case for Postive test case :- Success of Data readFromConsole") {
 
-  REQUIRE(compareDataFromStream(stream,stream) == true);
+  REQUIRE(compareDataFromStream(rv_array,send_array) == true);
 }
 /*
 TEST_CASE("Case for Positive test case :-Success of finding temperature array Minimum value") {
