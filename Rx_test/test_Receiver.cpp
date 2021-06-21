@@ -11,7 +11,7 @@
 
 TEST_CASE("Case for Postive test case :- Success of Data readFromConsole") {
 
-  REQUIRE(compareDataFromStream(stream,stream) == true);
+  REQUIRE(compareDataFromStream(stream,stream) == false);
 }
 /*
 TEST_CASE("Case for Positive test case :-Success of finding temperature array Minimum value") {
