@@ -12,7 +12,7 @@
 #include "stdlib.h"
 #include "string.h"
 #include "ctype.h"
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 
 /* Function Details *******************************************************************************************
 * Function Name : main
