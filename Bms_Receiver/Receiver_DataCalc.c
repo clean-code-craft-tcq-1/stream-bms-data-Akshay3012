@@ -36,7 +36,7 @@ while (fgets(rv_data, 500, stdin))
 		if(isdigit(*token))
 		{
       		//printf( " %s\n", token ); //printing each token
-		stream[i] = atoi(*token);
+		stream[i] = atoi(token);
 		printf("%d\n",stream[i]);
 		i++;
 		}	
