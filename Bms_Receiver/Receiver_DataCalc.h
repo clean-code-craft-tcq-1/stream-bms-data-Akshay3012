@@ -10,7 +10,6 @@
 
 
 /* ***************************** Prototypes ***************************** */
-int print_stream();
 float Calc_Maxi(float current_value, float prev_maxi);
 float Calc_Mini(float current_value, float prev_mini);
 float Calc_Average(float Val_Arr[], int NoOfValues);
