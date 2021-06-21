@@ -20,8 +20,8 @@
 * Returns       : 0
 * *********************************************************************************************************** */
 int main() {
-    char rv_data[300];
-    char c;
+    char rv_data[5000];
+    char ch;
     int i=0;
     
    // while ((c = fgetc(stdin)) != EOF) fputc(c, stdout);
