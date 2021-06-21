@@ -6,6 +6,8 @@
 #include "string.h"
 
 
+print_stream();
+
 TEST_CASE("Test case to test the Maximum Value with lesser Value")
 {
   float current_value = 10.1;
