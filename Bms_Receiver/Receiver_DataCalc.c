@@ -22,17 +22,13 @@
 * Arguments     : current_value(float), prev_maxi(float)
 * Returns       : current_value(float) or prev_maxi(float) which is greater
 * *********************************************************************************************************** */
-float Calc_Maxi()
+int Calc_Maxi(int Val_Arr[])
 {
-	int max = rv_array[0];
- 
-    // Traverse array elements from second and
-    // compare every element with current max 
+	int max = Val_Arr[0];
 	for (int i = 0; i < 20; i++)
-        	if (rv_array[i] > max)
-         		max = rv_array[i];
-	printf("max=%d",max);
-	
+        	if (Val_Arr[i] > max)
+         		max = Val_Arr[i];
+	return max;
 }
 
 /* Function Details *******************************************************************************************
@@ -41,16 +37,13 @@ float Calc_Maxi()
 * Arguments     : current_value(float), prev_mini(float)
 * Returns       : current_value(float) or prev_mini(float) which is lesser
 * *********************************************************************************************************** */
-float Calc_Mini(float current_value, float prev_mini)
+int Calc_Mini(int Val_Arr[])
 {
-  if(current_value < prev_mini)
-  {
-    return current_value;
-  }
-  else
-  {
-    return prev_mini;
-  }
+	int min = Val_Arr[0];
+	for (int i = 0; i < 20; i++)
+        	if (Val_Arr[i] < min)
+         		min = Val_Arr[i];
+	return min;
 }
 
 /* Function Details *******************************************************************************************
@@ -59,14 +52,14 @@ float Calc_Mini(float current_value, float prev_mini)
 * Arguments     : Val_Arr(float Array), NoOfValues(int)
 * Returns       : Average(float)
 * *********************************************************************************************************** */
-float Calc_Average(float Val_Arr[], int NoOfValues)
+float Calc_Average(int Val_Arr[])
 {
   float Average = 0;
   float Sum = 0;
-  
+	
   if(NoOfValues != 0)
  {
-   for(int i=0; i<NoOfValues; i++)
+   for(int i=15; i<20; i++)
    {
      Sum += Val_Arr[i];
    }
@@ -76,7 +69,7 @@ float Calc_Average(float Val_Arr[], int NoOfValues)
    return Average;
  }		
 	
-  Average = Sum/NoOfValues;
+  Average = ((float)Sum)/((float)NoOfValues);
   
   return Average;
 }
@@ -108,4 +101,34 @@ bool compareDataFromStream(int send_data[],int receive_data[])
 		if(send_data[i] != receive_data[i])
 		   flag = false;
 	return flag;
+}
+
+bool compareAverageDataFromStream(int send_data[],int receive_data[])
+{
+	int avg1 = Calc_Average(send_data);
+	int avg2 = Calc_Average(receive_data);
+	if(avg1 == avg2)
+		return true;
+	else
+		return false;
+}
+
+bool compareMaxDataFromStream(int send_data[],int receive_data[])
+{
+	int max1 = Calc_Maxi(send_data);
+	int max2 = Calc_Maxi(receive_data);
+	if(max1 == max2)
+		return true;
+	else
+		return false;
+}
+
+bool compareMinDataFromStream(int send_data[],int receive_data[])
+{
+	int min1 = Calc_Mini(send_data);
+	int min2 = Calc_Mini(receive_data);
+	if(min1 == min2)
+		return true;
+	else
+		return false;
 }
