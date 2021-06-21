@@ -18,9 +18,9 @@
 
 /* Function Details *******************************************************************************************
 * Function Name : Calc_Maxi
-* Description   : Checks the current value with the Previous maximum value
-* Arguments     : current_value(float), prev_maxi(float)
-* Returns       : current_value(float) or prev_maxi(float) which is greater
+* Description   : To Find the maximum value from the stream of data
+* Arguments     : int val_arr[]
+* Returns       : the max value from the stream
 * *********************************************************************************************************** */
 int Calc_Maxi(int Val_Arr[])
 {
@@ -33,9 +33,9 @@ int Calc_Maxi(int Val_Arr[])
 
 /* Function Details *******************************************************************************************
 * Function Name : Calc_Mini
-* Description   : Checks the current value with the Previous minimum value
-* Arguments     : current_value(float), prev_mini(float)
-* Returns       : current_value(float) or prev_mini(float) which is lesser
+* Description   : To find the min value from stream
+* Arguments     : int val_arr[]
+* Returns       : the min value from the stream
 * *********************************************************************************************************** */
 int Calc_Mini(int Val_Arr[])
 {
@@ -49,7 +49,7 @@ int Calc_Mini(int Val_Arr[])
 /* Function Details *******************************************************************************************
 * Function Name : Calc_Average
 * Description   : Calculates the average for given array
-* Arguments     : Val_Arr(float Array), NoOfValues(int)
+* Arguments     : Val_Arr[]
 * Returns       : Average(float)
 * *********************************************************************************************************** */
 float Calc_Average(int Val_Arr[])
@@ -68,6 +68,12 @@ float Calc_Average(int Val_Arr[])
   return Average;
 }
 
+/* Function Details *******************************************************************************************
+* Function Name : readfromconsole
+* Description   : To read the values from console
+* Arguments     : 
+* Returns       : 
+* *********************************************************************************************************** */
 
 void readfromconsole()
 {  
@@ -92,6 +98,12 @@ void readfromconsole()
     }
 }
 
+/* Function Details *******************************************************************************************
+* Function Name : compareDataFromStream
+* Description   : To check the incoming data from the sender and is received in the receiver side(both temp and soc)
+* Arguments     : int send_data[], int receive_data[]
+* Returns       : bool flag
+* *********************************************************************************************************** */
 bool compareDataFromStream(int send_data[],int receive_data[])
 {
 	bool flag = true;
@@ -101,6 +113,12 @@ bool compareDataFromStream(int send_data[],int receive_data[])
 	return flag;
 }
 
+/* Function Details *******************************************************************************************
+* Function Name : compareAverageDataFromStream
+* Description   : To find the average data from the sender and is received in the receiver side(both temp and soc)
+* Arguments     : int send_data[], int receive_data[]
+* Returns       : bool flag
+* *********************************************************************************************************** */
 bool compareAverageDataFromStream(int send_data[],int receive_data[])
 {
 	int avg1 = Calc_Average(send_data);
@@ -110,7 +128,12 @@ bool compareAverageDataFromStream(int send_data[],int receive_data[])
 	else
 		return false;
 }
-
+/* Function Details *******************************************************************************************
+* Function Name : compareMaxDataFromStream
+* Description   : To find the Max value from the sender and is received in the receiver side(both temp and soc)
+* Arguments     : int send_data[], int receive_data[]
+* Returns       : bool flag
+* *********************************************************************************************************** */
 bool compareMaxDataFromStream(int send_data[],int receive_data[])
 {
 	int max1 = Calc_Maxi(send_data);
@@ -120,7 +143,12 @@ bool compareMaxDataFromStream(int send_data[],int receive_data[])
 	else
 		return false;
 }
-
+/* Function Details *******************************************************************************************
+* Function Name : compareMinDataFromStream
+* Description   : To find the Min value from the sender and is received in the receiver side(both temp and soc)
+* Arguments     : int send_data[], int receive_data[]
+* Returns       : bool flag
+* *********************************************************************************************************** */
 bool compareMinDataFromStream(int send_data[],int receive_data[])
 {
 	int min1 = Calc_Mini(send_data);
