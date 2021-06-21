@@ -21,6 +21,3 @@ jobs:
       
     - name : Sender | Reciever
       run: ./testchecker | ./testchecker1
-      
-    - name: run
-      run: ./testchecker1 
