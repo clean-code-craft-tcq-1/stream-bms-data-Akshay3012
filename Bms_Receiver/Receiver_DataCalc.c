@@ -7,18 +7,7 @@
 
 /* **************************************** Header Files **************************************************** */
 #include "Receiver_DataCalc.h"
-#include "stdio.h"
-#include "math.h"
-#include "stdlib.h"
-#include "string.h"
-#include "ctype.h"
 
-int print_stream() {
-    char rv_data[300];
-    scanf("%s\n", rv_data);
-    printf("\n\n\nReceived Data* %s\n\n",rv_data);
-    return 0;
-}
 
 
 /* Function Details *******************************************************************************************
