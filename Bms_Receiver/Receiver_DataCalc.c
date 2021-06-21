@@ -74,6 +74,7 @@ void readfromconsole()
    int i=0;
    while (fgets(rv_data, 500, stdin))
    {
+	printf("%s",rv_data);
 	char * token = strtok(rv_data, "/n");
    	while( token != NULL ) 
 	{
@@ -81,6 +82,7 @@ void readfromconsole()
 		{
 			if(i<10)	
 				rv_array_temp[i] = atoi(token);
+			
 			else
 				rv_array_soc[i] = atoi(token);
 			i++;
