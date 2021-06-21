@@ -20,11 +20,16 @@
 * Returns       : 0
 * *********************************************************************************************************** */
 int main() {
-    char rv_data[5000];
+    char rv_data[500];
     char ch;
     int i=0;
     
-   while ((ch = fgetc(stdin)) != EOF) fputc(ch, stdout);
+  // while ((ch = fgetc(stdin)) != EOF)
+while (fgets(rv_data, 500, stdin))
+{
+	printf("%s", rv_data); 
+}
+	
 //printf("%c\n",ch);
   //printf("\n\n\nReceived Data* %s\n\n",rv_data);
     return 0;
