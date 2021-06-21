@@ -24,7 +24,7 @@ int main() {
     char ch;
     int i=0;
     
-   while ((ch = fgetc(stdin)) != EOF) fputc(c, stdout);
+   while ((ch = fgetc(stdin)) != EOF) fputc(ch, stdout);
 //printf("%c\n",ch);
   //printf("\n\n\nReceived Data* %s\n\n",rv_data);
     return 0;
