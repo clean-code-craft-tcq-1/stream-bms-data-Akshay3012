@@ -56,14 +56,14 @@ float Calc_Average(int Val_Arr[])
 {
   float Average = 0;
   float Sum = 0;
-	
+  float NoOfValues = 5;	
 
    for(int i=15; i<20; i++)
    {
      Sum += Val_Arr[i];
    }		
 	
-  Average = ((float)Sum)/((float)NoOfValues);
+  Average = Sum/NoOfValues;
   
   return Average;
 }
