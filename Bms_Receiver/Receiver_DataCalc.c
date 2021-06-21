@@ -28,7 +28,7 @@ int main() {
   // while ((ch = fgetc(stdin)) != EOF)
 while (fgets(rv_data, 500, stdin))
 {
-	printf("%s", rv_data); 
+	//printf("%s", rv_data); 
 	char * token = strtok(rv_data, "/n");
    	// loop through the string to extract all other tokens
    	while( token != NULL ) 
