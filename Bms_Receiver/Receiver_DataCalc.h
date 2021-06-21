@@ -8,12 +8,15 @@
 
 /* ******************************* Defines ******************************* */
 
+int stream[20];
+char rv_data[500];
 
 /* ***************************** Prototypes ***************************** */
 float Calc_Maxi(float current_value, float prev_maxi);
 float Calc_Mini(float current_value, float prev_mini);
 float Calc_Average(float Val_Arr[], int NoOfValues);
+
 void readfromconsole();
-bool compareDataFromStream();
+bool compareDataFromStream(char* send_data,char* receive_data);
 
 #endif
