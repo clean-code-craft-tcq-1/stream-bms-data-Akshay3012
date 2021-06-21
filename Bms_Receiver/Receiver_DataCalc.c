@@ -24,13 +24,13 @@
 * *********************************************************************************************************** */
 float Calc_Maxi()
 {
-  int max = stream[0];
+	int max = stream[0];
  
     // Traverse array elements from second and
     // compare every element with current max 
-    for (i = 0; i < 20; i++)
-        if (stream[i] > max)
-         max = stream[i];
+	for (int i = 0; i < 20; i++)
+        	if (stream[i] > max)
+         		max = stream[i];
 	printf("max=%d",max);
 	
 }
@@ -105,7 +105,7 @@ bool compareDataFromStream(int send_data[],int receive_data[])
 {
 	bool flag = true;
 	for(int i = 0; i<10; i++)
-		if(send_data[i] != receive_data[i]
+		if(send_data[i] != receive_data[i])
 		   flag = false;
 	return flag;
 }
