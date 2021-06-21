@@ -21,9 +21,10 @@
 * *********************************************************************************************************** */
 int main() {
     char rv_data[300];
-    int c;
-    //scanf("%s", rv_data);
+    char c;
+    
     while ((c = fgetc(stdin)) != EOF) fputc(c, stdout);
+    //while ( (ch = getchar()) != EOF) {}
    // printf("\n\n\nReceived Data* %s\n\n",rv_data);
     return 0;
 }
