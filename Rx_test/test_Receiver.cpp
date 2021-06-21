@@ -10,24 +10,45 @@
 
 //printstream();
 
-TEST_CASE("Case for Postive test case :- Success of Data readFromConsole") {
+TEST_CASE("Case for Postive test case :- Success of Data readFromConsole Temperature") {
 
-  REQUIRE(compareDataFromStream(rv_array,send_array) == true);
-}
-
-TEST_CASE("Case for Positive test case :-Success finding array Minimum value") {
-
-  REQUIRE(compareMaxDataFromStream(rv_array,send_array) == true);
-}
-
-TEST_CASE("Case for Positive test case:-Success of finding array Min value ") {
-
-  REQUIRE(compareMinDataFromStream(rv_array,send_array)  == true);
+  REQUIRE(compareDataFromStream(rv_array_temp,send_array_temp) == true);
 }
 
 
-TEST_CASE("Case for evaluating success of Moving average") {
+TEST_CASE("Case for Postive test case :- Success of Data readFromConsole Soc") {
 
-  REQUIRE(compareAverageDataFromStream(rv_array,send_array) == true);
+  REQUIRE(compareDataFromStream(rv_array_soc,send_array_soc) == true);
+}
+
+TEST_CASE("Case for Positive test case :-Success finding array Max value Temperature") {
+
+  REQUIRE(compareMaxDataFromStream(rv_array_temp,send_array_temp) == true);
+}
+
+TEST_CASE("Case for Positive test case :-Success finding array Max value Soc") {
+
+  REQUIRE(compareMaxDataFromStream(rv_array_soc,send_array_soc) == true);
+}
+
+TEST_CASE("Case for Positive test case:-Success of finding array Min value Temperature") {
+
+  REQUIRE(compareMinDataFromStream(rv_array_temp,send_array_temp)  == true);
+}
+
+TEST_CASE("Case for Positive test case:-Success of finding array Min value Soc") {
+
+  REQUIRE(compareMinDataFromStream(rv_array_soc,send_array_soc)  == true);
+}
+
+
+TEST_CASE("Case for evaluating success of Moving average Temperature") {
+
+  REQUIRE(compareAverageDataFromStream(rv_array_temp,send_array_temp) == true);
+}
+
+TEST_CASE("Case for evaluating success of Moving average Soc") {
+
+  REQUIRE(compareAverageDataFromStream(rv_array,send_array_soc) == true);
 }
 
