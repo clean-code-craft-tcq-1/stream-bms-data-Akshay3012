@@ -23,20 +23,25 @@ int main() {
     char rv_data[500];
     char ch;
     int i=0;
+    int stream[20];
     
   // while ((ch = fgetc(stdin)) != EOF)
 while (fgets(rv_data, 500, stdin))
 {
-	//printf("%s", rv_data); 
+	printf("%s", rv_data); 
 	char * token = strtok(rv_data, "/n");
    	// loop through the string to extract all other tokens
    	while( token != NULL ) 
 	{
 		if(isdigit(*token))
-		//{
-      		printf( " %s\n", token ); //printing each token
+		{
+      		//printf( " %s\n", token ); //printing each token
+		stream[i] = atoi(*token);
+		printf("%d\n",stream[i]);
+		i++;
+		}	
       		token = strtok(NULL, "/n");
-		//}
+		
    	}
 	
 	
